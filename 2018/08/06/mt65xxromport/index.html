@@ -186,71 +186,70 @@ A:请删除后再复制！</p>
 <h3>修改机型</h3>
 
 <p>在您的build.prop找到以下字段，它们会在比较靠前的位置</p>
-<p><code>
-ro.product.model=
-ro.product.brand=
-ro.product.name=
-ro.product.device=
-ro.product.board=
-ro.product.manufacturer=
-ro.build.product=
-</code></p>
+<code>
+<p>ro.product.model=</p>
+<p>ro.product.brand=</p>
+<p>ro.product.name=</p>
+<p>ro.product.device=</p>
+<p>ro.product.board=</p>
+<p>ro.product.manufacturer=</p>
+<p>ro.build.product=</p>
+</code>
 	
 	
 <p>按下面所展示的内容进行修改</p>
-<p><code>
-ro.product.model=品牌+机型
-ro.product.brand=品牌
-ro.product.name=机型
-ro.product.device=机型
-ro.product.board=机型
-ro.product.manufacturer=品牌（使用大写字母）
-ro.build.product=机型
-</code></p>
+<code>
+<p>ro.product.model=品牌+机型</p>
+<p>ro.product.brand=品牌</p>
+<p>ro.product.name=机型</p>
+<p>ro.product.device=机型</p>
+<p>ro.product.board=机型</p>
+<p>ro.product.manufacturer=品牌（使用大写字母）</p>
+<p>ro.build.product=机型</p>
+</code>
 就像这样：
 <code>
-ro.product.model=Xiaomi Redmi 4A
-ro.product.brand=Xiaomi
-ro.product.name=Redmi 4A
-ro.product.device=Redmi 4A
-ro.product.board=Redmi 4A
-ro.product.manufacturer=XIAOMI
-ro.build.product=Redmi 4A
-</code></p>
+<p>ro.product.model=Xiaomi Redmi 1S LTETD</p>
+<p>ro.product.brand=Xiaomi</p>
+<p>ro.product.name=Redmi 1S LTETD</p>
+<p>ro.product.device=Redmi 1S LTETD</p>
+<p>ro.product.board=Redmi 1S LTETD</p>
+<p>ro.product.manufacturer=XIAOMI</p>
+<p>ro.build.product=Redmi 1S LTETD</p>
+</code>
 
 <h3>修改语言与时区</h3>
 
 <p>在您的build.prop找到以下字段，它们会在比较靠前的位置
 <code>
-ro.product.locale.language=
-ro.product.locale.region=
+<p>ro.product.locale.language=</p>
+<p>ro.product.locale.region=</p>
 </code>
 按下面所展示的内容进行修改
 <code>
-ro.product.locale.language=语言
-ro.product.locale.region=地区
+<p>ro.product.locale.language=语言</p>
+<p>ro.product.locale.region=地区</p>
 </code>
 就像这样：
 <code>
-ro.product.locale.language=zh
-ro.product.locale.region=CN
+<p>ro.product.locale.language=zh</p>
+<p>ro.product.locale.region=CN</p>
 </code></p>
 
 <h2>修改刷机脚本里面的内容</h2>
 
 <h3>脚本文件路径</h3>
 
-<p><code>
-/META-INF/google/android/updater-script
+<code>
+<p>/META-INF/google/android/updater-script</p>
 </code>
-<strong>请保持updayer-script文件的编码为UTF-8</strong></p>
+<p><strong>请保持updayer-script文件的编码为UTF-8</strong></p>
 
 <h3>去掉机型验证，如果脚本中不存在机型验证的内容就跳过此步骤</h3>
 
 <p>将updater-script中类似于
 <code>
-assert(getprop(&quot;ro.product.device&quot;) == &quot;xxx&quot; ||
-   getprop(&quot;ro.build.product&quot;) == &quot;xxx&quot; || getprop(&quot;ro.build.product&quot;) == &quot;xxx&quot;);
+<p>assert(getprop(&quot;ro.product.device&quot;) == &quot;xxx&quot; ||getprop(&quot;ro.build.product&quot;) == &quot;xxx&quot; || getprop(&quot;ro.build.product&quot;) == &quot;xxx&quot;);</p>
 </code>
 的内容去掉即可.</p>
 
@@ -262,13 +261,13 @@ assert(getprop(&quot;ro.product.device&quot;) == &quot;xxx&quot; ||
 
 <p>这是目标ROM中相关的内容
 <code>
-mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p3&quot;, &quot;/system&quot;);
-mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p7&quot;, &quot;/data&quot;);
+<p>mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p3&quot;, &quot;/system&quot;);</p>
+<p>mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p7&quot;, &quot;/data&quot;);</p>
 </code>
 这是官方ROM中相关的内容
 <code>
-mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p6&quot;, &quot;/system&quot;);
-mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p6&quot;, &quot;/data&quot;);
+<p>mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p6&quot;, &quot;/system&quot;);</p>
+<p>mount(&quot;ext4&quot;, &quot;EMMC&quot;, &quot;/dev/block/mmcblk0p6&quot;, &quot;/data&quot;);</p>
 </code>
 差别很明显，但是不要用我提供的内容进行替换</p>
 
@@ -288,31 +287,31 @@ ui</em>print(&quot;发布日期：2018-08-04 &quot;);</p>
 
 <h3>判断并解决一些刷机脚本的错误</h3>
 
-<p><code>
-status 1 :错误的原因是传入的参加少于4个。导致错误的地方是install.c::try_update_binary() ，解决方案是换一个Recovery
-status 2 :错误的原因是传入的参加中的第二个参加，RECOVERY_API_VERSION,错误，不是 &#39;1&#39;, &#39;2&#39;, &#39;3&#39;，这个要去修改源代码中的Android.mk，所以建议换一个 Recovery
-status 3 :刷机包本身有问题，无法被打开, 解决方案，去换一个好的刷机包，或者是重新下载刷机包。
-status 4 :无法在刷机包中找到刷机脚本，updater-script ，解决方案，对刷机包重新打包往里面加入updater-script.
-status 5 :读取刷机脚本updater-script错误 ,解决方案：重写刷机脚本
-status 6 :处理刷机脚本的时候出错 ， 解决方案，重写刷机脚本
-status 7 :分析刷机脚本的时候出错了。解决方案，重写刷机脚本，改编码为utf8-no-bom
-</code></p>
+<code>
+<p>status 1 :错误的原因是传入的参加少于4个。导致错误的地方是install.c::try_update_binary() ，解决方案是换一个Recovery</p>
+<p>status 2 :错误的原因是传入的参加中的第二个参加，RECOVERY_API_VERSION,错误，不是 &#39;1&#39;, &#39;2&#39;, &#39;3&#39;，这个要去修改源代码中的Android.mk，所以建议换一个 Recovery</p>
+<p>status 3 :刷机包本身有问题，无法被打开, 解决方案，去换一个好的刷机包，或者是重新下载刷机包。</p>
+<p>status 4 :无法在刷机包中找到刷机脚本，updater-script ，解决方案，对刷机包重新打包往里面加入updater-script.</p>
+<p>status 5 :读取刷机脚本updater-script错误 ,解决方案：重写刷机脚本</p>
+<p>status 6 :处理刷机脚本的时候出错 ， 解决方案，重写刷机脚本</p>
+<p>status 7 :分析刷机脚本的时候出错了。解决方案，重写刷机脚本，改编码为utf8-no-bom</p>
+</code>
 
 <h2>修复一些BUG</h2>
 
 <h3>通讯录fc</h3>
 
 <p>这个只要替换
-<code> libsqlite.so </code>
+<code><p> libsqlite.so </p></code>
 和
-<code> libsqlite_jni.so </code>
+<code><p> libsqlite_jni.so </p></code>
 这两个文件到ROM即可</p>
 
 <h3>卡第一屏</h3>
 
 <p>这个其实没什么
 替换
-<code> libandroid_runtime.so </code>
+<code><p> libandroid_runtime.so </p></code>
 即可</p>
 
 <p><code>注：卡第一屏也可能是Boot出现了问题，可以通过Logcat确定</code></p>
@@ -320,7 +319,7 @@ status 7 :分析刷机脚本的时候出错了。解决方案，重写刷机脚�
 <h3>照相机拍不了照或者拍照卡死或重启</h3>
 
 <p>同样是替换
-<code> libandroid_runtime.so </code>
+<code><p> libandroid_runtime.so </p></code>
 即可</p>
 
 <h3>通话时对方听不到我方声音</h3>
@@ -346,7 +345,7 @@ status 7 :分析刷机脚本的时候出错了。解决方案，重写刷机脚�
 
 <h3>不显示开机动画</h3>
 
-<p>使用官方ROM的<code> /system/bin/bootanimation </code>文件替换到ROM里</p>
+<p>使用官方ROM的<code><p> /system/bin/bootanimation </p></code>文件替换到ROM里</p>
 
 <h3>彩信不可用</h3>
 
@@ -367,9 +366,9 @@ mediaserver  媒体服务
 
 <p><code>
 audio开头全部替换  音频驱动
-hw/下audio开头的全部替换  这里面应该是话筒 啊！！扬声器这些的驱动
+hw/下audio开头的全部替换  这里面应该是话筒啊扬声器啊这些的驱动
 libstagefright  开头的全部替换  播放声音的驱动
-libmedia  开头的全部替换  媒体相关的驱动  .
+libmedia  开头的全部替换  媒体相关的驱动 
 </code></p>
 
 <h3>移植成功触屏无法使用</h3>
