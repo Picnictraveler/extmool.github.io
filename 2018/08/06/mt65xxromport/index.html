@@ -126,17 +126,17 @@ MT65XX同平台移植（包括但不限于MT6582机型相互移植）</p></block
 
 <h2>Q&amp;A:</h2>
 
-<p>Q:指南中所提到的文件来自哪里？
-A:来自于您设备的官方ROM</p>
+<p>Q:指南中所提到的文件来自哪里？</p>
+<p>A:来自于您设备的官方ROM</p>
 
-<p>Q:我的官方ROM里缺少指南中所提到的文件怎么办？
-A:直接忽略掉它就行</p>
+<p>Q:我的官方ROM里缺少指南中所提到的文件怎么办？</p>
+<p>A:直接忽略掉它就行</p>
 
-<p>Q:我可不可以使用一键移植Boot？
-A:可以，但是不推荐，因为这可能会导致无法启动或者产生致命BUG</p>
+<p>Q:我可不可以使用一键移植Boot？</p>
+<p>A:可以，但是不推荐，因为这可能会导致无法启动或者产生致命BUG</p>
 
-<p>Q:指南中所提到的替换是不是直接覆盖对应文件夹或者文件？
-A:请删除后再复制！</p>
+<p>Q:指南中所提到的替换是不是直接覆盖对应文件夹或者文件？</p>
+<p>A:请删除后再复制！</p>
 
 <h2>开始移植</h2>
 
@@ -144,28 +144,28 @@ A:请删除后再复制！</p>
 
 <h4>需要替换的文件夹</h4>
 
-<p><code>
--etc:
-/system/etc/buletooth
-/system/etc/firmeware
-/system/etc/mddb
-/system/etc/wifi
--lib:
-/system/lib/hw
--usr:
-/system/usr/keychars
-/system/usr/keylayout
--vendor:
-/system/usr/lib
-</code></p>
+<code>
+<p>-etc:</p>
+<p>/system/etc/buletooth</p>
+<p>/system/etc/firmeware</p>
+<p>/system/etc/mddb</p>
+<p>/system/etc/wifi</p>
+<p>-lib:</p>
+<p>/system/lib/hw</p>
+<p>-usr:</p>
+<p>/system/usr/keychars</p>
+<p>/system/usr/keylayout</p>
+<p>-vendor:</p>
+<p>/system/usr/lib</p>
+</code>
 
 <h4>需要替换的文件</h4>
 
-<p><code>
--lib:
-/system/lib/libaudio.primary.default.so
-/system/lib/libcameracustom.so
-</code></p>
+<code>
+<p>-lib:</p>
+<p>/system/lib/libaudio.primary.default.so</p>
+<p>/system/lib/libcameracustom.so</p>
+</code>
 
 <h3>移植Boot.img</h3>
 
