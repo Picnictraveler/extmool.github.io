@@ -349,26 +349,26 @@ ui_print(&quot; &quot;);</p>
 
 <h3>彩信不可用</h3>
 
-<p>在MMSC里面写：http://mmsc.vent.mobi 
-彩信代理写：10.0.0.200 
-彩信端口选：80
-这就为ctnet设置了彩信代理，就可以使选择ctnet联网方式照常接收彩信。</p>
+<p>在MMSC里面写：http://mmsc.vent.mobi </p>
+<p>彩信代理写：10.0.0.200 </p>
+<p>彩信端口选：80 </p>
+<p>这就为ctnet设置了彩信代理，就可以使选择ctnet联网方式照常接收彩信。</p>
 
 <h3>通话声音或者音乐无声音等BUG</h3>
 
-<p>首先替换bin 下 
+<p>首先替换bin 下 </p>
 <code>
-audioloop    应该是音频相关的
-stagefright  应该是播放声音相关的   
-mediaserver  媒体服务
+<p>audioloop    应该是音频相关的</p>
+<p>stagefright  应该是播放声音相关的  </p> 
+<p>mediaserver  媒体服务</p>
 </code>
-然后是lib</p>
+<p>然后是lib</p>
 
 <p><code>
-audio开头全部替换  音频驱动
-hw/下audio开头的全部替换  这里面应该是话筒啊扬声器啊这些的驱动
-libstagefright  开头的全部替换  播放声音的驱动
-libmedia  开头的全部替换  媒体相关的驱动 
+<p>audio开头全部替换  音频驱动</p>
+<p>hw/下audio开头的全部替换  这里面应该是话筒啊扬声器啊这些的驱动</p>
+<p>libstagefright  开头的全部替换  播放声音的驱动</p>
+<p>libmedia  开头的全部替换  媒体相关的驱动 </p>
 </code></p>
 
 <h3>移植成功触屏无法使用</h3>
